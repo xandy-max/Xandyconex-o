@@ -1,0 +1,327 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+
+    background-color: #050505;
+
+    /*
+       Fundo espacial com estrelas
+    */
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size: 80px 80px, 120px 120px;
+
+    background-position: 0 0, 40px 60px;
+
+    padding: 30px 15px;
+}
+
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    text-align: center;
+
+    background-color: rgba(10, 10, 20, 0.95);
+
+    border: 2px solid #ffe81f;
+
+    border-radius: 12px;
+
+    padding: 35px 20px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 0 15px rgba(255, 232, 31, 0.3);
+}
+
+.cabecalho h1 {
+    color: #ffe81f;
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 5px #ffe81f,
+        0 0 15px rgba(255, 232, 31, 0.5);
+}
+
+.cabecalho p {
+    color: #cccccc;
+
+    font-size: 1rem;
+}
+
+
+/* =========================
+   BLOCOS
+========================= */
+
+.bloco {
+    background-color: rgba(12, 12, 20, 0.96);
+
+    border: 1px solid #333333;
+
+    border-left: 4px solid #00aaff;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 0 15px rgba(0, 0, 0, 0.7);
+
+    transition: 0.3s;
+}
+
+.bloco:hover {
+    border-left-color: #ffe81f;
+
+    box-shadow:
+        0 0 20px rgba(0, 170, 255, 0.2);
+}
+
+.bloco h2 {
+    color: #ffe81f;
+
+    font-size: 1.3rem;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #333333;
+}
+
+
+/* =========================
+   LABELS
+========================= */
+
+label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 8px;
+
+    color: #eeeeee;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    color: white;
+
+    background-color: #080810;
+
+    border: 1px solid #444444;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* Efeito quando clicar no campo */
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #00aaff;
+
+    box-shadow:
+        0 0 10px rgba(0, 170, 255, 0.4);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+select {
+    cursor: pointer;
+}
+
+
+/* =========================
+   RADIO BUTTONS
+========================= */
+
+.opcoes {
+    display: flex;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+}
+
+.opcoes label {
+    margin: 0;
+
+    font-weight: normal;
+
+    cursor: pointer;
+}
+
+.opcoes input {
+    accent-color: #ffe81f;
+
+    margin-right: 5px;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #ffe81f;
+
+    color: #000000;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 15px rgba(255, 232, 31, 0.4);
+}
+
+button:hover {
+    background-color: white;
+
+    box-shadow:
+        0 0 25px rgba(255, 232, 31, 0.8);
+
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #888888;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    .cabecalho {
+        padding: 25px 15px;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.5rem;
+    }
+
+    .bloco {
+        padding: 18px;
+    }
+
+    .bloco h2 {
+        font-size: 1.1rem;
+    }
+
+    .opcoes {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+}
