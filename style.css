@@ -1,6 +1,6 @@
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
+/* =========================================
+   ⭐ STAR WARS - PESQUISA
+========================================= */
 
 * {
     margin: 0;
@@ -8,210 +8,229 @@
     box-sizing: border-box;
 }
 
-body {
-    min-height: 100vh;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    color: white;
-
-    background-color: #050505;
-
-    /*
-       Fundo espacial com estrelas
-    */
-    background-image:
-        radial-gradient(white 1px, transparent 1px),
-        radial-gradient(white 1px, transparent 1px);
-
-    background-size: 80px 80px, 120px 120px;
-
-    background-position: 0 0, 40px 60px;
-
-    padding: 30px 15px;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 30px 15px;
 
-/* =========================
-   CONTAINER PRINCIPAL
-========================= */
+    /* Fundo espacial */
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+        radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.7) 1px, transparent 2px),
+        radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+        radial-gradient(circle at 90% 85%, rgba(255, 255, 255, 0.6) 1px, transparent 2px),
+        radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+        linear-gradient(135deg, #000000, #050816 50%, #101522);
+
+    background-size:
+        180px 180px,
+        250px 250px,
+        320px 320px,
+        220px 220px,
+        280px 280px,
+        cover;
+
+    background-attachment: fixed;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
 
 .container {
     width: 100%;
-    max-width: 900px;
-
-    margin: 0 auto;
+    max-width: 850px;
+    margin: auto;
 }
 
-
-/* =========================
+/* =========================================
    CABEÇALHO
-========================= */
+========================================= */
 
-.cabecalho {
+header {
     text-align: center;
-
-    background-color: rgba(10, 10, 20, 0.95);
-
-    border: 2px solid #ffe81f;
-
-    border-radius: 12px;
-
-    padding: 35px 20px;
-
-    margin-bottom: 25px;
-
-    box-shadow:
-        0 0 15px rgba(255, 232, 31, 0.3);
+    margin-bottom: 35px;
 }
 
-.cabecalho h1 {
+header h1 {
+    font-size: 34px;
     color: #ffe81f;
 
-    font-size: 2rem;
-
-    margin-bottom: 15px;
-
     text-transform: uppercase;
+    letter-spacing: 2px;
 
     text-shadow:
         0 0 5px #ffe81f,
-        0 0 15px rgba(255, 232, 31, 0.5);
+        0 0 15px rgba(255, 232, 31, 0.7),
+        0 0 30px rgba(255, 232, 31, 0.4);
+
+    margin-bottom: 12px;
 }
 
-.cabecalho p {
-    color: #cccccc;
-
-    font-size: 1rem;
+header p {
+    color: #bfc7d5;
+    font-size: 16px;
 }
 
+/* =========================================
+   SEÇÕES
+========================================= */
 
-/* =========================
-   BLOCOS
-========================= */
+section {
+    position: relative;
 
-.bloco {
-    background-color: rgba(12, 12, 20, 0.96);
+    background: rgba(5, 10, 20, 0.88);
 
-    border: 1px solid #333333;
+    border: 1px solid #39465a;
+    border-left: 4px solid #ffe81f;
 
-    border-left: 4px solid #00aaff;
-
-    border-radius: 10px;
+    border-radius: 8px;
 
     padding: 25px;
-
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 
     box-shadow:
-        0 0 15px rgba(0, 0, 0, 0.7);
+        0 0 10px rgba(0, 0, 0, 0.8),
+        inset 0 0 20px rgba(0, 100, 255, 0.04);
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.bloco:hover {
+/* Efeito azul ao passar o mouse */
+
+section:hover {
+    border-color: #4da6ff;
     border-left-color: #ffe81f;
 
     box-shadow:
-        0 0 20px rgba(0, 170, 255, 0.2);
+        0 0 15px rgba(0, 140, 255, 0.25),
+        inset 0 0 20px rgba(0, 140, 255, 0.08);
+
+    transform: translateY(-3px);
 }
 
-.bloco h2 {
+/* =========================================
+   TÍTULOS
+========================================= */
+
+section h2 {
     color: #ffe81f;
 
-    font-size: 1.3rem;
+    font-size: 22px;
 
     margin-bottom: 20px;
 
-    padding-bottom: 10px;
+    text-transform: uppercase;
 
-    border-bottom: 1px solid #333333;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px rgba(255, 232, 31, 0.5);
+
+    border-bottom: 1px solid #39465a;
+
+    padding-bottom: 12px;
 }
 
-
-/* =========================
+/* =========================================
    LABELS
-========================= */
+========================================= */
 
 label {
     display: block;
 
+    font-weight: bold;
+
     margin-top: 15px;
     margin-bottom: 8px;
 
-    color: #eeeeee;
-
-    font-weight: bold;
+    color: #e5e7eb;
 }
 
-
-/* =========================
+/* =========================================
    INPUTS
-========================= */
+========================================= */
 
 input[type="text"],
 textarea,
 select {
     width: 100%;
 
-    padding: 12px;
+    padding: 13px 15px;
 
-    color: white;
+    background: #080d16;
 
-    background-color: #080810;
+    color: #ffffff;
 
-    border: 1px solid #444444;
+    border: 1px solid #3b4a60;
 
-    border-radius: 6px;
+    border-radius: 5px;
 
     font-size: 15px;
 
     outline: none;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #737b89;
+}
 
-/* Efeito quando clicar no campo */
+/* =========================================
+   EFEITO HOLOGRÁFICO NOS CAMPOS
+========================================= */
 
 input[type="text"]:focus,
 textarea:focus,
 select:focus {
-    border-color: #00aaff;
+
+    border-color: #4da6ff;
 
     box-shadow:
-        0 0 10px rgba(0, 170, 255, 0.4);
+        0 0 5px #4da6ff,
+        0 0 15px rgba(77, 166, 255, 0.35);
+
+    background: #0a111e;
 }
 
-
-/* =========================
+/* =========================================
    TEXTAREA
-========================= */
+========================================= */
 
 textarea {
-    min-height: 100px;
+    min-height: 120px;
 
     resize: vertical;
 }
 
-
-/* =========================
+/* =========================================
    SELECT
-========================= */
+========================================= */
 
 select {
     cursor: pointer;
 }
 
+select option {
+    background: #080d16;
+    color: white;
+}
 
-/* =========================
+/* =========================================
    RADIO BUTTONS
-========================= */
+========================================= */
 
 .opcoes {
     display: flex;
 
-    gap: 25px;
+    gap: 15px;
 
     flex-wrap: wrap;
 
@@ -219,109 +238,174 @@ select {
 }
 
 .opcoes label {
-    margin: 0;
 
-    font-weight: normal;
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #080d16;
+
+    border: 1px solid #303d50;
+
+    padding: 10px 16px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.opcoes label:hover {
+
+    border-color: #ffe81f;
+
+    color: #ffe81f;
+
+    box-shadow:
+        0 0 8px rgba(255, 232, 31, 0.25);
+}
+
+.opcoes input[type="radio"] {
+
+    width: 17px;
+    height: 17px;
+
+    accent-color: #ffe81f;
 
     cursor: pointer;
 }
 
-.opcoes input {
-    accent-color: #ffe81f;
-
-    margin-right: 5px;
-}
-
-
-/* =========================
+/* =========================================
    BOTÃO
-========================= */
+========================================= */
 
 button {
+
     width: 100%;
 
-    padding: 16px;
+    padding: 17px;
 
-    border: none;
+    margin-top: 5px;
 
-    border-radius: 7px;
+    border: 1px solid #ffe81f;
 
-    background-color: #ffe81f;
+    border-radius: 5px;
+
+    background: #ffe81f;
 
     color: #000000;
 
-    font-size: 16px;
+    font-size: 17px;
 
     font-weight: bold;
 
     letter-spacing: 1px;
 
+    text-transform: uppercase;
+
     cursor: pointer;
 
-    transition: 0.3s;
-
     box-shadow:
-        0 0 15px rgba(255, 232, 31, 0.4);
+        0 0 10px rgba(255, 232, 31, 0.4);
+
+    transition: 0.3s ease;
 }
 
 button:hover {
-    background-color: white;
+
+    background: #fff45c;
 
     box-shadow:
-        0 0 25px rgba(255, 232, 31, 0.8);
+        0 0 10px #ffe81f,
+        0 0 25px rgba(255, 232, 31, 0.6);
 
     transform: translateY(-2px);
 }
 
 button:active {
-    transform: translateY(0);
+    transform: translateY(1px);
 }
 
-
-/* =========================
+/* =========================================
    RODAPÉ
-========================= */
+========================================= */
 
 footer {
+
     text-align: center;
 
-    padding: 25px;
+    margin-top: 30px;
 
-    color: #888888;
+    color: #ffe81f;
 
     font-size: 14px;
+
+    text-shadow:
+        0 0 8px rgba(255, 232, 31, 0.5);
 }
 
+/* =========================================
+   LINHA DECORATIVA
+========================================= */
 
-/* =========================
-   CELULAR
-========================= */
+footer::before {
+
+    content: "";
+
+    display: block;
+
+    width: 120px;
+
+    height: 2px;
+
+    background: #ffe81f;
+
+    margin: 0 auto 15px;
+
+    box-shadow:
+        0 0 8px #ffe81f;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
 
 @media (max-width: 600px) {
 
     body {
-        padding: 15px 10px;
+        padding: 20px 10px;
     }
 
-    .cabecalho {
-        padding: 25px 15px;
+    header h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
     }
 
-    .cabecalho h1 {
-        font-size: 1.5rem;
+    header p {
+        font-size: 14px;
     }
 
-    .bloco {
+    section {
         padding: 18px;
     }
 
-    .bloco h2 {
-        font-size: 1.1rem;
+    section h2 {
+        font-size: 18px;
     }
 
     .opcoes {
         flex-direction: column;
+        gap: 8px;
+    }
 
-        gap: 12px;
+    .opcoes label {
+        width: 100%;
+    }
+
+    button {
+        font-size: 15px;
     }
 }
